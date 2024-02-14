@@ -1,0 +1,67 @@
+
+$maincolor: black;
+
+@mixin greenyellow-black-back {
+    background-color: $maincolor;
+    color: greenyellow;
+    border: 2px solid rgb(60, 66, 235);
+
+}
+
+h1 {
+    @include greenyellow-black-back()
+}
+
+div {
+    h3 {
+        background-color: greenyellow;
+        color: blue;
+        border: 1px dotted black;
+    }
+}
+
+div {
+    input {
+        font-size: 20px;
+        background-color: black;
+        color: greenyellow;
+        &[type="submit"]:hover {
+            background-color: blue;
+            color: greenyellow;
+        }
+    }
+}
+
+// $columns: 4;
+// $column-width: 80px;
+
+// @while $columns > 0 {
+//     .col-#{$columns} {
+//         width: $column-width;
+//         left: $column-width * ($columns - 1);
+//     }
+
+//     $columns: $columns - 1;
+// }
+
+// /* Will output the following CSS: */
+
+// .col-4 {
+//     width: 80px;
+//     left: 240px;
+// }
+
+// .col-3 {
+//     width: 80px;
+//     left: 160px;
+// }
+
+// .col-2 {
+//     width: 80px;
+//     left: 80px;
+// }
+
+// .col-1 {
+//     width: 80px;
+//     left: 0px;
+// }
